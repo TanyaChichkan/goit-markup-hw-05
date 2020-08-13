@@ -64,7 +64,7 @@
           <h1 class="head-hero">
             Эффективные решения для вашего бизнеса
           </h1>
-          <button class="btn">Заказать услугу</button>
+          <button data-modal-open class="btn">Заказать услугу</button>
         </div>
       </section>
 
@@ -587,21 +587,101 @@
         </div>
 
         <div class="sign-up">
-          <p class="footer-text">
-            <b>Подпишитесь на рассылку</b>
-          </p>
-          <form action="mail.php">
-            <input type="text" name="E-mail" id="E-mail" />
-            <button class="button-sign-up btn">
-              Подписаться
-              <svg class="button-icon" width="24" height="24">
-                <use href="./img-copy/symbol-defs.svg#icon-send"></use>
-              </svg>
-            </button>
-            <!-- <input type="submit" class="form-text" value="Подписаться"> -->
+          <form class="form-footer">
+            <div class="form-field">
+              <label for="mail" class="form-label"
+                >Подпишитесь на рассылку</label
+              >
+              <div class="form-frame">
+                <input
+                  type="email"
+                  name="E-mail"
+                  id="mail"
+                  class="footer-input"
+                  placeholder="E-mail"
+                />
+
+                <button class="button-sign-up btn">
+                  Подписаться
+                  <svg class="button-icon" width="24" height="24">
+                    <use href="./img-copy/symbol-defs.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <svg class="close-icon" width="30" height="30" data-modal-close>
+          <use href=" ./symbol-defs.svg#iconclose-1"></use>
+        </svg>
+
+        <form>
+          <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <div class="form-field">
+            <label for="name" class="form-label-modal">Имя</label>
+            <input
+              type="text"
+              name="user-name"
+              id="name"
+              class="form-input"
+              autofocus
+              autocomplete="on"
+            />
+          </div>
+          <div class="form-field">
+            <label for="tel" class="form-label-modal">Телефон</label>
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              class="form-input"
+              autocomplete="on"
+            />
+          </div>
+          <div class="form-field">
+            <label for="mail" class="form-label-modal">Почта</label>
+            <input
+              type="email"
+              name="email"
+              id="mail"
+              class="form-input"
+              autocomplete="on"
+            />
+          </div>
+          <div class="form-field field-comment">
+            <label for="comment" class="form-label-modal">Комментарии</label>
+            <textarea
+              name="comment"
+              id="comment"
+              rows="10"
+              placeholder="Comments"
+              class="form-comment form-input"
+            ></textarea>
+          </div>
+          <div class="form-field field-checkbox">
+            <input
+              type="checkbox"
+              name="policy-check"
+              id="policy"
+              class="js-license"
+            />
+            <label for="policy"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="#">Условия договора</a></label
+            >
+          </div>
+          <button type="submit" disabled class="js-button btn btn-submit">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./modal.js" type="module"></script>
   </body>
 </html>
