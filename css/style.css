@@ -808,6 +808,7 @@ button:focus {
 
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   transform: scale(0);
   /* transform: translateY(-100%); */
   pointer-events: none;
