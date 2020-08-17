@@ -626,45 +626,64 @@
           <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
           <div class="form-field">
             <label for="name" class="form-label-modal">Имя</label>
-            <input
-              type="text"
-              name="user-name"
-              id="name"
-              class="form-input"
-              autofocus
-              autocomplete="on"
-            />
+            <div class="wrapper-input">
+              <input
+                type="text"
+                name="user-name"
+                id="name"
+                class="form-input"
+                autofocus
+                autocomplete="on"
+              />
+              <svg class="input-icon" width="12" height="12">
+                <use href="./img-copy/symbol-defs.svg#iconperson"></use>
+              </svg>
+            </div>
           </div>
+
           <div class="form-field">
             <label for="tel" class="form-label-modal">Телефон</label>
-            <input
-              type="tel"
-              name="tel"
-              id="tel"
-              class="form-input"
-              autocomplete="on"
-            />
+            <div class="wrapper-input">
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                class="form-input"
+                autocomplete="on"
+              />
+              <svg class="input-icon" width="13" height="13">
+                <use href="./img-copy/symbol-defs.svg#iconphone"></use>
+              </svg>
+            </div>
           </div>
+
           <div class="form-field">
             <label for="mail" class="form-label-modal">Почта</label>
-            <input
-              type="email"
-              name="email"
-              id="mail"
-              class="form-input"
-              autocomplete="on"
-            />
+            <div class="wrapper-input">
+              <input
+                type="email"
+                name="email"
+                id="mail"
+                class="form-input"
+                autocomplete="on"
+              />
+              <svg class="input-icon" width="15" height="12">
+                <use href="./img-copy/symbol-defs.svg#iconemail"></use>
+              </svg>
+            </div>
           </div>
+
           <div class="form-field field-comment">
             <label for="comment" class="form-label-modal">Комментарии</label>
             <textarea
               name="comment"
               id="comment"
               rows="10"
-              placeholder="Comments"
+              placeholder="Введите текст"
               class="form-comment form-input"
             ></textarea>
           </div>
+
           <div class="form-field field-checkbox">
             <input
               type="checkbox"
