@@ -194,6 +194,12 @@ height: 14.94px;
 
 /* Section Hero */
 
+.container-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .head-hero {
   max-width: 696px;
   margin: 0 auto 30px;
@@ -312,7 +318,7 @@ background-image: url('../img-copy/astronaut.svg');
 /* Main-content section */
 
 .main-content {
-  padding-top: 0;
+  padding-top: 94px;
 }
 
 .main-content-list {
@@ -683,6 +689,8 @@ button {
   color: var(--primary-text-color);
   background-color: #f5f4fa;
   letter-spacing: 0.03em;
+  border: none;
+  border-radius: 4px;
 
   transition: background-color 250ms var(--cubic-timing),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -828,7 +836,6 @@ button:focus {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  cursor: pointer;
 }
 
 .close-icon {
@@ -889,9 +896,9 @@ button:focus {
   fill: var(--hover-color);
 }
 
-.form-input:focus {
+/* .form-input:focus {
   border-color: var(--hover-color);
-}
+} */
 
 .form-field {
   display: flex;
@@ -918,13 +925,66 @@ button:focus {
 
 .field-checkbox {
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-submit {
   display: block;
   margin: 0 auto;
+  margin-top: 30px;
 }
 
 .form-field > label {
   margin-bottom: 4px;
+}
+
+.checkbox {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+  margin-right: 7px;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--hover-color);
+  background-image: url("../img-copy/icons/iconcheck.svg");
+  background-size: contain;
+  border: 0.2px solid var(--hover-color);
+  background-origin: border-box;
+}
+
+.label {
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  transition: transform 250ms var(--cubic-timing) 250ms,
+    transform 250ms var(--cubic-timing);
+}
+
+.checkbox:checked ~ .label {
+  transform: scale(1.1);
+}
+
+.checkbox:checked ~ .checkbox-icon {
+  transform: translateX(-20px);
 }
