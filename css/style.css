@@ -339,7 +339,7 @@ background-image: url('../img-copy/astronaut.svg');
 }
 
 .head-title {
-  margin: 94px auto 50px;
+  margin: 0 auto 50px;
 
   font-weight: 700;
   font-size: 36px;
@@ -894,6 +894,11 @@ button:focus {
 
 .wrapper-input:focus-within > .input-icon {
   fill: var(--hover-color);
+}
+
+.wrapper-input:focus-within .form-input {
+  outline: none;
+  border-color: var(--hover-color);
 }
 
 /* .form-input:focus {
